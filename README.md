@@ -5,7 +5,7 @@
 <div data-importer="stats" align="center">
   <img src="https://raw.githubusercontent.com/Captain-Ankush/Captain-Ankush/main/stats.svg" width="49%" alt="Stats graph" />
 
-<img src="https://raw.githubusercontent.com/Captain-Ankush/Captain-Ankush/main/languages.svg"  width="49%" alt="Languages graph" />
+<img src="https://raw.githubusercontent.com/Captain-Ankush/Captain-Ankush/main/languages.svg" height="250%"  width="49%" alt="Languages graph" />
 </div>
 
 ###
