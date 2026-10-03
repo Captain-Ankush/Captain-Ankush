@@ -12,16 +12,27 @@ jobs:
       contents: write
 
     steps:
-      - name: Generate stats
+      - uses: actions/checkout@v6
+
+      - name: Generate stats graph
         uses: cicirello/user-statistician@v1
         with:
           image-file: stats.svg
-          user: captain-Ankush
-          stats: >
-            totalCommits,prs,issues,contributedTo
-          colors: dracula
+          colors: dark
+          hide-keys: languages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Publish stats
+      - name: Generate languages graph
+        uses: cicirello/user-statistician@v1
+        with:
+          image-file: languages.svg
+          colors: dark
+          hide-keys: general, contributions, repositories
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish graphs
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: stats-output
