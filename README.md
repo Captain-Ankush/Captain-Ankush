@@ -3,9 +3,9 @@
 ###
 
 <div data-importer="stats" align="center">
-  <img src="https://raw.githubusercontent.com/Captain-Ankush/Captain-Ankush/stats-output/stats.svg" alt="Stats graph" />
+  <img src="https://raw.githubusercontent.com/Captain-Ankush/Captain-Ankush/main/stats.svg" alt="Stats graph" />
 
-<img src="https://raw.githubusercontent.com/Captain-Ankush/Captain-Ankush/stats-output/languages.svg" alt="Languages graph" />
+<img src="https://raw.githubusercontent.com/Captain-Ankush/Captain-Ankush/main/languages.svg" alt="Languages graph" />
 </div>
 
 ###
