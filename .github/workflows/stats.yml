@@ -1,0 +1,30 @@
+name: Generate GitHub Stats
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Generate stats
+        uses: cicirello/user-statistician@v1
+        with:
+          image-file: stats.svg
+          user: captain-Ankush
+          stats: >
+            totalCommits,prs,issues,contributedTo
+          colors: dracula
+
+      - name: Publish stats
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: stats-output
+          build_dir: .
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
